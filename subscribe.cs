@@ -24,7 +24,7 @@ namespace metoffice_playground
             log.LogInformation($"Hub Challenge is: {challenge}");
             log.LogInformation($"Hub verify token is: {verify_token}");
             return challenge != null
-                ? (ActionResult)new OkObjectResult($"{verify_token}")
+                ? (ActionResult)new OkObjectResult($"{challenge}")
                 : new BadRequestObjectResult("Please pass a challenge on the query string or in the request body");
         }
     }
